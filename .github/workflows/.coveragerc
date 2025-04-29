@@ -1,0 +1,7 @@
+[run]
+branch = True
+source = inventory_manager
+data_file = .coverage
+
+[report]
+show_missing = true
