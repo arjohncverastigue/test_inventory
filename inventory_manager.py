@@ -1,6 +1,5 @@
-# inventory_manager.py
-
 inventory = {}
+
 
 def add_item(name, quantity):
     if name in inventory:
@@ -9,6 +8,7 @@ def add_item(name, quantity):
         inventory[name] = quantity
     print(f"Added {quantity} of '{name}'.")
 
+
 def remove_item(name):
     if name in inventory:
         del inventory[name]
@@ -16,12 +16,14 @@ def remove_item(name):
     else:
         print(f"Item '{name}' not found.")
 
+
 def update_stock(name, quantity):
     if name in inventory:
         inventory[name] = quantity
         print(f"Updated '{name}' stock to {quantity}.")
     else:
         print(f"Item '{name}' not found.")
+
 
 def view_inventory():
     if not inventory:
@@ -31,6 +33,7 @@ def view_inventory():
         for name, quantity in inventory.items():
             print(f"{name}: {quantity}")
         print()
+
 
 def main():
     while True:
@@ -61,6 +64,7 @@ def main():
             break
         else:
             print("Invalid choice. Please select from 1 to 5.")
+
 
 if __name__ == "__main__":
     main()
