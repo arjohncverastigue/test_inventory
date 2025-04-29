@@ -28,7 +28,9 @@ jobs:
         run: flake8 . --max-line-length=88
 
       - name: Run Unit Tests and Coverage Report
-        run: pytest --cov=. --cov-report=term --cov-report=xml
+        run: |
+          pytest --cov=inventory_manager --cov-report=term --cov-report=xml
+          ls -la  # Debug: list files to confirm .coverage is created
 
       - name: Upload Coverage Data File
         uses: actions/upload-artifact@v4
